@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Up Timer with Fire Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('fire.gif') center/cover no-repeat;
+            animation: fireAnimation 5s linear infinite; /* Adjust animation duration as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #timer {
+            font-family: 'Helvetica Neue', sans-serif; /* Change to your preferred dramatic font */
+            font-size: 4em; /* Increase font size for more impact */
+            font-weight: bold;
+            color: #ff4500; /* Set your preferred text color, here it's orange */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fireAnimation {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">00:00:00</div>
+
+    <script>
+        function startTimer(display) {
+            var seconds = 0;
+
+            function updateTimer() {
+                var hours = Math.floor(seconds / 3600);
+                var minutes = Math.floor((seconds % 3600) / 60);
+                var secs = seconds % 60;
+
+                var timeString = (hours < 10 ? "0" : "") + hours + ":" +
+                                 (minutes < 10 ? "0" : "") + minutes + ":" +
+                                 (secs < 10 ? "0" : "") + secs;
+
+                display.textContent = timeString;
+
+                seconds++;
+            }
+
+            setInterval(updateTimer, 1000);
+        }
+
+        window.onload = function () {
+            var display = document.querySelector('#timer');
+            startTimer(display);
+        };
+    </script>
+</body>
+</html>
