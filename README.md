@@ -20,7 +20,7 @@ You can customize the timer duration and styling by modifying the HTML and CSS f
 
 ## Author
 
-Your Name
+Jonathan Lyngdoh
 
 ## License
 
