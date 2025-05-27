@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Lyngdoh - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Jonathan Lyngdoh</div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Jonathan Lyngdoh</span></h1>
+                <p class="subtitle">Web Developer & Software Developer</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img 
+                    src="profile.jpg" 
+                    alt="Jonathan Lyngdoh" 
+                    loading="eager"
+                    fetchpriority="high"
+                    width="350"
+                    height="350"
+                    decoding="async"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hey! I'm Jonathan — a web and software developer who loves turning ideas into cool digital stuff. Whether it's building sleek websites, coding up full-stack apps, or just making things work better with tech, I'm all about creating stuff that looks good and runs smooth.
+
+                    I'm the kind of person who actually enjoys debugging (yeah, weird flex), always down to learn new tools, and obsessed with clean code and clean UI. From front-end vibes to back-end logic, I like working across the stack and bringing projects to life.
+                    
+                    When I'm not coding, I'm probably bingeing dev videos on YouTube or tinkering with side projects.
+                    
+                    Let's build something awesome 🚀</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>SQL</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C++</span>
+
+                        <!-- Add more skills -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                    <p>Project Description(Pending :D)</p>
+                    <div class="project-links">
+                        <a href="#" class="btn small">View Live</a>
+                        <a href="#" class="btn small">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>lyngsjonathan@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 8787797376</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/JonathanLyngdoh" target="_blank"><i class="fab fa-github"></i> My GitHub Page</a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jonathan Lyngdoh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
