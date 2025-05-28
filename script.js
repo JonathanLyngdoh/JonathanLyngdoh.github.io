@@ -69,19 +69,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form Submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
+    // Set the form action to FormSubmit endpoint
+    contactForm.setAttribute('action', 'https://formsubmit.co/f44f0dfeb4f0df584e71c89aa8e37e45');
+    contactForm.setAttribute('method', 'POST');
+    
+    // Add honeypot to prevent spam
+    const honeypot = document.createElement('input');
+    honeypot.type = 'text';
+    honeypot.name = '_honey';
+    honeypot.style.display = 'none';
+    contactForm.appendChild(honeypot);
+    
+    // Disable captcha
+    const captcha = document.createElement('input');
+    captcha.type = 'hidden';
+    captcha.name = '_captcha';
+    captcha.value = 'false';
+    contactForm.appendChild(captcha);
+    
+    // Add thank you page redirect
+    const redirect = document.createElement('input');
+    redirect.type = 'hidden';
+    redirect.name = '_next';
+    redirect.value = window.location.href;
+    contactForm.appendChild(redirect);
+
+    // Add subject line
+    const subject = document.createElement('input');
+    subject.type = 'hidden';
+    subject.name = '_subject';
+    subject.value = 'New Contact Form Submission';
+    contactForm.appendChild(subject);
+
+    // Add template
+    const template = document.createElement('input');
+    template.type = 'hidden';
+    template.name = '_template';
+    template.value = 'table';
+    contactForm.appendChild(template);
+    
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Add logging to debug form submission
+        console.log('Form submitted');
+        console.log('Form action:', this.action);
+        console.log('Form method:', this.method);
         
-        // Get form data
+        // Log form data
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', data);
-        
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
     });
 }
 
