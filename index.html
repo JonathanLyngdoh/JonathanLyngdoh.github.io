@@ -1,151 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Lyngdoh - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Jonathan Lyngdoh</div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0b0a" />
+    <meta name="description" content="Jonathan Lyngdoh is a software developer building thoughtful things for the web." />
+    <title>Jonathan Lyngdoh — Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Jonathan Lyngdoh, home">JL<span>®</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="availability" href="mailto:lyngsjonathan@gmail.com"><span></span> AVAILABLE FOR A GOOD IDEA <b>↗</b></a>
+    </header>
+
+    <main id="main">
+      <section class="hero page-width" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-item"><span class="eyebrow-index">01 /</span> SOFTWARE DEVELOPER <span class="eyebrow-dot">✳</span> INDIA</p>
+          <h1 id="hero-title" class="hero-title"><span class="title-line reveal-line">Ideas into</span><span class="title-line reveal-line"><span class="title-outline">digital</span> <span class="title-accent">things<span class="title-period">.</span></span></span></h1>
+          <p class="hero-intro reveal-item">I’m Jonathan—a developer who likes making useful things for the web, and sweating the details that make them feel just right.</p>
+          <div class="hero-actions reveal-item">
+            <a class="button button-accent" href="#work"><span>Explore selected work</span><span class="button-icon">↘</span></a>
+            <a class="quiet-link" href="mailto:lyngsjonathan@gmail.com">Let’s talk <span>↗</span></a>
+          </div>
+          <div class="hero-foot reveal-item"><span>SCROLL A LITTLE</span><span class="hero-foot-rule"></span><span>THERE’S MORE BELOW</span></div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
+        <div class="hero-visual" data-parallax>
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="portrait-backdrop"></div>
+          <div class="portrait-frame"><img src="profile.jpg" alt="Portrait of Jonathan Lyngdoh" width="1728" height="1647" fetchpriority="high" /></div>
+          <div class="portrait-caption"><span class="caption-star">✳</span><span>THE HUMAN<br />BEHIND THE CODE</span></div>
+          <span class="visual-coordinate">26° 10' N<br />91° 45' E</span>
+          <span class="visual-index">J. LYNGDOH <i>—</i> 2026</span>
         </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Jonathan Lyngdoh</span></h1>
-                <p class="subtitle">Web Developer & Software Developer</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
-                </div>
-            </div>
-            <div class="profile-image">
-                <img 
-                    src="profile.jpg" 
-                    alt="Jonathan Lyngdoh" 
-                    loading="eager"
-                    fetchpriority="high"
-                    width="350"
-                    height="350"
-                    decoding="async"
-                >
-            </div>
+        <div class="hero-bottom-rule"></div>
+      </section>
+
+      <section class="intro page-width section-space" id="about" aria-labelledby="intro-title">
+        <div class="section-label reveal-item"><span>02</span> THE SHORT VERSION <i></i></div>
+        <div class="intro-grid">
+          <h2 class="section-title reveal-item" id="intro-title">Good work lives<br />in the <em>details.</em></h2>
+          <div class="intro-copy reveal-item"><p>From the first sketch to the last line of code, I like making digital experiences that feel considered. I’m at home across the stack—building interfaces, wiring up the logic, then refining the small things people notice.</p><p>Curious by default. Always learning. Usually working on something.</p><a class="underlined-link" href="https://github.com/JonathanLyngdoh" target="_blank" rel="noreferrer">More about what I do <span>↗</span></a></div>
         </div>
-    </section>
+        <div class="stack-row reveal-item"><span class="stack-label">CURRENT TOOLKIT</span><div class="stack-list"><span>HTML & CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>SQL</span><span>Python</span><span>Java</span><span>C++</span></div></div>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hey! I'm Jonathan — a web and software developer who loves turning ideas into cool digital stuff. Whether it's building sleek websites, coding up full-stack apps, or just making things work better with tech, I'm all about creating stuff that looks good and runs smooth.
-
-                    I'm the kind of person who actually enjoys debugging (yeah, weird flex), always down to learn new tools, and obsessed with clean code and clean UI. From front-end vibes to back-end logic, I like working across the stack and bringing projects to life.
-                    
-                    When I'm not coding, I'm probably bingeing dev videos on YouTube or tinkering with side projects.
-                    
-                    Let's build something awesome 🚀</p>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>MongoDB</span>
-                        <span>SQL</span>
-                        <span>Python</span>
-                        <span>Java</span>
-                        <span>C++</span>
-
-                        <!-- Add more skills -->
-                    </div>
-                </div>
-            </div>
+      <section class="work page-width section-space" id="work" aria-labelledby="work-title">
+        <div class="section-label reveal-item"><span>03</span> THINGS I’VE BEEN MAKING <i></i><span class="section-side-note">AN OPEN TAB INTO MY WORK ↗</span></div>
+        <div class="work-heading reveal-item"><h2 class="section-title" id="work-title">A work<br />in <em>progress.</em></h2><p>Ideas, experiments, and the occasional happy accident. Find the latest over on GitHub.</p></div>
+        <div class="work-grid">
+          <a class="work-card github-card reveal-item" href="https://github.com/JonathanLyngdoh?tab=repositories" target="_blank" rel="noreferrer">
+            <div class="card-art art-code"><span class="card-art-label">CURRENTLY IN THE WORKSHOP</span><div class="code-window"><div class="code-window-top"><span></span><span></span><span></span><i>good-things.js</i></div><div class="code-window-body"><span class="code-line"><b>01</b> <i>const</i> idea = <em>curiosity</em>;</span><span class="code-line"><b>02</b> <i>const</i> make = (idea) =&gt; {</span><span class="code-line indented"><b>03</b> <i>return</i> <em>something useful</em>;</span><span class="code-line"><b>04</b> };</span><span class="code-line last-line"><b>05</b> <strong>make</strong>(idea); <span class="cursor-block"></span></span></div></div><div class="art-spark spark-a">✳</div><div class="art-spark spark-b">✳</div></div>
+            <div class="card-info"><div><span class="card-type">GITHUB <i>·</i> PROJECTS & EXPERIMENTS</span><h3>In the workshop</h3><p>Things I’m making, learning, and tinkering with.</p></div><span class="card-arrow">↗</span></div>
+          </a>
+          <a class="work-card portfolio-card reveal-item" href="https://github.com/JonathanLyngdoh/JonathanLyngdoh.github.io" target="_blank" rel="noreferrer">
+            <div class="card-art art-portfolio"><span class="portfolio-mark">J<span>.</span></span><span class="portfolio-sticker">A PERSONAL<br />CORNER OF THE WEB <b>↗</b></span><span class="portfolio-grid"></span><span class="portfolio-art-label">NOT A TEMPLATE. A LITTLE MORE ME.</span></div>
+            <div class="card-info"><div><span class="card-type">PERSONAL WEBSITE <i>·</i> 2026</span><h3>This little corner</h3><p>A home for my work, ideas, and what comes next.</p></div><span class="card-arrow">↗</span></div>
+          </a>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-image">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Project Name</h3>
-                    <p>Project Description(Pending :D)</p>
-                    <div class="project-links">
-                        <a href="#" class="btn small">View Live</a>
-                        <a href="#" class="btn small">Source Code</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>
+      <section class="contact page-width" id="contact" aria-labelledby="contact-title">
+        <div class="contact-star" aria-hidden="true">✳</div>
+        <p class="section-label reveal-item"><span>04</span> START SOMETHING <i></i></p>
+        <div class="contact-grid"><h2 class="contact-title reveal-item" id="contact-title">Let’s make<br />something <em>matter.</em></h2><div class="contact-copy reveal-item"><p>Got a good idea, a project in mind, or just want to talk shop? I’d love to hear from you.</p><a class="contact-link" href="mailto:lyngsjonathan@gmail.com">lyngsjonathan@gmail.com <span>↗</span></a></div></div>
+      </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>lyngsjonathan@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 8787797376</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/JonathanLyngdoh" target="_blank"><i class="fab fa-github"></i> My GitHub Page</a>
-                </div>
-            </div>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" class="btn primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Jonathan Lyngdoh. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html> 
+    <footer class="site-footer page-width"><a class="wordmark" href="#top">JL<span>®</span></a><span>MADE WITH CURIOSITY <i>·</i> <span id="year">2026</span></span><a href="https://github.com/JonathanLyngdoh" target="_blank" rel="noreferrer">FIND ME ON GITHUB <span>↗</span></a></footer>
+    <div class="cursor-glow" aria-hidden="true"></div>
+  </body>
+</html>
