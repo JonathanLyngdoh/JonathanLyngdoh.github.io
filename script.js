@@ -30,13 +30,18 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
 }
 
 let ticking = false;
+let maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
 const updateScroll = () => {
   if (progress) {
-    const distance = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.transform = `scaleX(${distance > 0 ? window.scrollY / distance : 0})`;
+    progress.style.transform = `scaleX(${window.scrollY / maxScroll})`;
   }
   ticking = false;
 };
+
+window.addEventListener('resize', () => {
+  maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  updateScroll();
+}, { passive: true });
 
 window.addEventListener('scroll', () => {
   if (ticking) return;
